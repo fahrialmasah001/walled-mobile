@@ -1,37 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
-import logo from '../assets/logo.png'
+import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import logo from "../assets/logo.png";
+import Button from "../components/PrimaryButton";
+import Input from "../components/Input";
 
-function halLogin() {
+function HalLogin() {
   return (
     <View style={styles.container}>
+      <Image
+        source={logo}
+        resizeMode="stretch"
+        style={[styles.logo, { width: 220, height: 55 }, { marginBottom: 50 }]}
+      />
 
-      <Image source={logo} resizeMode="stretch" style={[styles.logo, {width: 220, height: 55}, {marginBottom: 50}]} />
-      
-      <TextInput 
-        style={styles.input} 
-        placeholder="Email" 
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
         placeholderTextColor="#aaa"
-        keyboardType="email-address" 
-      />
-      
-      <TextInput 
-        style={styles.input} 
-        placeholder="Password" 
-        placeholderTextColor="#aaa" 
-        secureTextEntry={true} 
+        keyboardType="email-address"
       />
 
-      <TextInput 
-        style={styles.input} 
-        placeholder="No Hp" 
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
         placeholderTextColor="#aaa"
-        keyboardType="numeric"
-        maxLength={13}
+        secureTextEntry={true}
       />
 
-      <TouchableOpacity style={[styles.button, {marginTop: 10}]} >
-        <Text style={styles.buttonText}>Login</Text>
+      <Input />
+
+      <Link href="/home">Go to Home</Link>
+
+      <Button bgColor="#4DB6AC" text="Login" />
+
+      <TouchableOpacity style={[styles.button, { marginTop: 10 }]}>
+        <Text style={styles.buttonText}>Forgot Password?</Text>
       </TouchableOpacity>
 
       <StatusBar style="auto" />
@@ -42,9 +53,9 @@ function halLogin() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     padding: 20,
   },
   logo: {
@@ -54,34 +65,33 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   input: {
-    width: '100%',
+    width: "100%",
     height: 50,
-    borderColor: '#ddd',
+    borderColor: "#ddd",
     borderWidth: 1,
     borderRadius: 15,
     paddingHorizontal: 10,
     marginBottom: 15,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: "#f9f9f9",
     fontSize: 16,
   },
   button: {
-    backgroundColor: '#4DB6AC',
+    backgroundColor: "#4DB6AC",
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 15,
-    width: '100%',
-    alignItems: 'center',
-
+    width: "100%",
+    alignItems: "center",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 
-export default halLogin
+export default HalLogin;

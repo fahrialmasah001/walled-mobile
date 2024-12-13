@@ -16,7 +16,10 @@ function login() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>BYOND Mobile</Text>
+        <Text>haloooo</Text>
       </View>
+
+    
 
       <View style={styles.welcomeSection}>
         <Text style={styles.welcomeText}>Welcome to the Heaven</Text>
