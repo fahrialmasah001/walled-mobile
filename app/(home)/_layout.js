@@ -19,6 +19,7 @@ export default function TabLayout() {
         name="transfer"
         options={{
           title: "Transfer",
+
           tabBarIcon: ({ color }) => (
             <FontAwesome5 size={20} name="money-bill-wave" color={color} />
           ),
