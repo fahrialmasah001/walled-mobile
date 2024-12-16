@@ -2,7 +2,7 @@ import { Link, Stack } from "expo-router";
 import { Image, Text, View, StyleSheet } from "react-native";
 import logo from "../../assets/logo.png";
 
-function LogoTitle() {
+function Header() {
   return (
     <View style={styles.container}>
         <Text>HOME</Text>
@@ -22,7 +22,7 @@ export default function Home() {
             fontWeight: "bold",
           },
 
-          headerTitle: (props) => <LogoTitle {...props} />,
+          headerTitle: (props) => <Header {...props} />,
         }}
       />
       <Text>Home Screen</Text>

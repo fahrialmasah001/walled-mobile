@@ -6,6 +6,8 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "myapp",
+  "main": "node_modules/expo/AppEntry.js",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",

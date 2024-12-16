@@ -10,8 +10,6 @@ import {
 } from "react-native";
 import logo from "../assets/logo.png";
 import Button from "../components/button";
-import Input from "../components/input";
-import { NavigatiionContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
@@ -19,8 +17,27 @@ export default function App() {
       <Image
         source={logo}
         resizeMode="stretch"
-        style={[styles.logo, { width: 220, height: 55 }, { marginBottom: 50 }]}
+        style={[styles.logo, { width: 220, height: 55 }, { marginBottom: 60 }]}
       />
+
+      <Text
+        style={[
+          { fontSize: 20 },
+          { fontWeight: "bold" },
+          { marginBottom: 7, alignSelf: "flex-start" },
+        ]}
+      >
+        LUPA PASSWORD?
+      </Text>
+
+      <Text
+        style={[
+          { fontSize: 16 },
+          { marginBottom: 20, alignSelf: "flex-start" },
+        ]}
+      >
+        Masukkan Email Anda
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -29,34 +46,13 @@ export default function App() {
         keyboardType="email-address"
       />
 
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        placeholderTextColor="#aaa"
-        secureTextEntry={true}
-      />
-
-      <Button bgColor="#4DB6AC" text="Login" to="/(home)" />
+      <Button bgColor="#4DB6AC" text="Kirim" />
 
       <Text style={styles.text} marginTop={15}>
-        Don't have an account?
-        <Link style={{ color: "#007aff" }} href="/register">
+        Have account?
+        <Link style={{ color: "#007aff" }} href="/">
           {" "}
-          Register Here
-        </Link>
-      </Text>
-
-      <Text style={styles.text} marginTop={15} marginBottom={15}>
-        <Link style={{ color: "#007aff" }} href="/forgotpw">
-          {" "}
-          Forgot Password?
-        </Link>
-      </Text>
-
-      <Text>
-        <Link marginTop={10} style={{ color: "#007aff" }} href="/(home)">
-          {" "}
-          HOME
+          Login Here
         </Link>
       </Text>
 
